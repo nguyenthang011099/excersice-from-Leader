@@ -6,7 +6,6 @@ class main
     {
         $this->link = $value;
     }
-
     function getLink()
     {
         return $this->link;
