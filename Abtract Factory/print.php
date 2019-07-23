@@ -1,8 +1,11 @@
 <?php
 
-require_once "ShapeFactory.php";
-require_once "Shape.php";
+include "autoload.php";
 
-$factory = new ShapeFactory();
-$shapeCircle= $factory->getShape(Shape::CIRCLE);
-$shapeCircle->draw();
+$shapeFactory = FactoryProducer::getFactory("shape");
+$shape = $shapeFactory->getShape("circle");
+$shape->draw();
+
+$colorFactory = FactoryProducer::getFactory("color");
+$color = $colorFactory->getColor("red");
+$color->fill();

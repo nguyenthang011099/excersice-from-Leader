@@ -1,16 +1,16 @@
 <?php
 include "autoload.php";
-class ShapeFactory extends AbstractFactory
+class ShapeFactory
 {
-    public function getShape($shape){
-        switch(strtolower($shape)){
-            case "square":
+    public function getShape($type){
+        switch($type){
+            case Shape::SQUARE:
                     return new Square;
                     break;
-            case "circle":
+            case Shape::CIRCLE:
                     return new Circle;
                     break;
-            case "rectangle":
+            case Shape::RECTANGLE:
                     return new Rectangle;
                     break;
             default:
@@ -18,12 +18,6 @@ class ShapeFactory extends AbstractFactory
                 break;
 
         }
-        return null;
 
-    }
-
-    function getColor($color)
-    {
-        // TODO: Implement getColor() method.
     }
 }

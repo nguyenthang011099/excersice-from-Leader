@@ -1,12 +1,11 @@
 <?php
 
 
-
-class Rectangle implements Shape
+class Square implements Shape
 {
         public function draw()
         {
-            echo "Draw rectangle";
+            echo "Draw Square";
             // TODO: Implement draw() method.
         }
 }
